@@ -10,13 +10,13 @@ movie_collection = MovieCollection(database)
 
 
 @app.route('/movies')
-def movies_list():
+def list_all_movies():
     """Return a list of movies."""
     return jsonify(movie_collection.list())
 
 
 @app.route('/movies/<imdb>')
-def movies_retrieve(imdb):
+def retrieve_single_movie(imdb):
     """Return a specific movie based on IMDB id."""
     return jsonify(movie_collection.read(imdb))
 
