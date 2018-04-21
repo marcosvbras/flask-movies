@@ -1,7 +1,7 @@
 # Flask Movies API
 
 <p align="center">
-  <img src="https://raw.github.com/marcosvbras/flask-movies/master/images/sparrow.jpg" alt="Custom image"/>
+  <img src="https://raw.github.com/marcosvbras/flask-movies/master/images/jacksparrow.jpg" alt="Custom image"/>
 </p>
 
 **Flask Movies** is a Python API project created to taste the powerful of [Flask Framework](http://flask.pocoo.org/). This project also uses [MongoDB](https://www.mongodb.com/) as persistence layer.
@@ -31,13 +31,13 @@ $ pip install -r requirements.pip
 
 ### Database
 
-Install [MongoDB](https://www.mongodb.com/) in your machine and import the data from directory **dump**:
+Install [MongoDB](https://www.mongodb.com/) in your machine and import the data from **dump** directory:
 
 ```bash
 $ mongorestore dump
 ```
 
-Be sure **MongoDB** process are running.
+Be sure **MongoDB** process is running.
 
 ## How to run
 
