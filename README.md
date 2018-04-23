@@ -8,6 +8,11 @@
 
 **Flask Movies** is a Python API project created to taste the powerful of [Flask Framework](http://flask.pocoo.org/). This project also uses [MongoDB](https://www.mongodb.com/) as persistence layer. The theme of the API is "movies": you can **list**, **read**, **update**, **create** and **delete** movies.
 
+API Endpoints:
+- `GET /movies HTTP/1.1`: Return a list of movies with minimal informations
+- `GET /movies/<imdb> HTTP/1.1`: Return a specific movie object with minimal informations
+- `PUT /movies/<imdb> HTTP/1.1`: Update a specific movie object with minimal informations
+
 ## :hammer: Preparing the environment
 
 ### API
