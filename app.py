@@ -1,4 +1,5 @@
-from flask import Flask, jsonify, request, redirect, url_for, render_template
+from flask import (Flask, jsonify, request, redirect, url_for, render_template,
+                   abort)
 from pymongo import MongoClient
 from movies import MovieCollection
 
@@ -18,14 +19,27 @@ def index():
 @app.route('/movies')
 def list_all_movies():
     """Return a list of movies."""
+    app.logger.debug("Method list_all_movies")
+
     return jsonify(movie_collection.list())
 
 
-@app.route('/movies/<imdb>', methods=['GET', 'PUT'])
+@app.route('/movies/<imdb>', methods=['GET', 'PUT', 'DELETE'])
 def retrieve_single_movie(imdb):
     """Return a specific movie based on IMDB id."""
+
     if request.method == 'GET':
-        return jsonify(movie_collection.read(imdb))
+        movie = movie_collection.read(imdb)
+
+        if movie:
+            return jsonify(movie)
+    elif request.method == 'PUT':
+        movie = movie_collection.update(request.json)
+
+        if movie:
+            return jsonify(movie)
+
+    return abort(404)
 
 
 @app.errorhandler(404)
