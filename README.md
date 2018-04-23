@@ -4,14 +4,16 @@
   <img src="https://raw.github.com/marcosvbras/flask-movies/master/images/jacksparrow.jpg" alt="Custom image"/>
 </p>
 
-**Flask Movies** is a Python API project created to taste the powerful of [Flask Framework](http://flask.pocoo.org/). This project also uses [MongoDB](https://www.mongodb.com/) as persistence layer.
+## :movie_camera: What is this?
 
-## Preparing the environment
+**Flask Movies** is a Python API project created to taste the powerful of [Flask Framework](http://flask.pocoo.org/). This project also uses [MongoDB](https://www.mongodb.com/) as persistence layer. The theme of the API is "movies": you can **list**, **read**, **update**, **create** and **delete** movies.
+
+## :hammer: Preparing the environment
 
 ### API
-This project was developed with **Python version 3.6**, so, for a correct running, it is recommended to install this one.
+All code was written with **Python 3.6**, so, for a correct running, it is recommended to install this one.
 
-First, it is required to install all project dependencies. You can use [Pipenv](https://github.com/pypa/pipenv) or [Virtualenv](https://virtualenv.pypa.io/en/stable/). If you are using **Pipenv**, use the following command to install from **Pipfile**:
+After Python installed, it is required to install all dependencies. You can use [Pipenv](https://github.com/pypa/pipenv) or [Virtualenv](https://virtualenv.pypa.io/en/stable/). If you are using **Pipenv**, use the following command to install from **Pipfile**:
 
 ```bash
 $ pipenv install
@@ -22,7 +24,7 @@ $ pipenv install
 $ pipenv shell
 ```
 
-However, if you are using **Virtualenv**, you need to activate the environment and install from **requirements.pip** file with the following commands:
+However, if you are using **Virtualenv**, you need to activate the environment and install from **requirements.pip** file:
 
 ```bash
 $ source YOUR_ENVIRONMENT_DIRECTORY/bin/activate
@@ -39,7 +41,7 @@ $ mongorestore dump
 
 Be sure **MongoDB** process is running.
 
-## How to run
+## :running: How to run
 
 Export environment variable to tell Flask which file must be loaded and then run Flask:
 
